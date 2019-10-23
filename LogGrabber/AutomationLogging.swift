@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+#if ENABLE_AUTOMATION_LOGGING
 public var XCUIAutomationLogger: XCUITestsLogValidationProtocol? = nil
 
 public protocol AutomationLoggingView: class {
@@ -76,5 +77,5 @@ public extension XCUITestsLogValidationProtocol {
 public class LogValidationView: UITextView {
     public static let parentViewTag = 333
 }
-
+#endif
 
